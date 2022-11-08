@@ -1,0 +1,389 @@
+@import "mixin";
+* {
+    margin: 0px;
+    padding: 0px;
+    // color: aliceblue;
+    // background-color: black;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.input_edit_popup {
+    position: absolute;
+    width: 25%;
+    top: 35%;
+    top: 35%;
+    left: 40%;
+    // padding: 1rem;
+    background-color: #f1f0f1;
+    border: 1px solid;
+    display: none;
+    div {
+        background-color: #3490dc;
+        // height: 10%;
+        .fa-xmark {
+            float: right;
+            // background-color: grey;
+            font-size: 1.8rem;
+        }
+        p {
+            color: white;
+            font-size: 1.8rem;
+        }
+    }
+    form {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+        input {
+            border: none;
+            padding: 0.3rem;
+        }
+        select {
+            border: none;
+            padding: 0.3rem;
+        }
+    }
+
+    label {
+        display: block;
+        margin: 0.5rem;
+        .check_box {
+            display: block;
+        }
+    }
+    .inc_width {
+        width: 95%;
+    }
+    .btn_flex {
+        float: right;
+        margin: 1rem;
+    }
+    .colorbtn {
+        background-color: #6d747d;
+        border-radius: 0.3rem;
+    }
+    .colorSave {
+        background-color: #3490dc;
+        border-radius: 0.2rem;
+    }
+}
+
+.container {
+    @include flex-col;
+    height: 100%;
+    .top_bar {
+        display: flex;
+        justify-content: end;
+        height: 3.5rem;
+        background-color: #fffefe;
+        // box-shadow: 1rem;
+        a {
+            text-decoration: none;
+            padding: 1rem;
+            // background-color: aqua;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+    main {
+        @include grid-column(1fr 3fr);
+        grid-gap: 1rem;
+        .custom_elements {
+            @include flex-col;
+            border: 2px solid #f8f9fa;
+            text-align: center;
+            padding: 5px;
+            h2 {
+                padding: 1rem;
+                font-size: 1.5rem;
+                background-color: #f0f0f3;
+                font-weight: 500;
+            }
+            .form_element {
+                border: 2px solid #fafafb;
+                // background-color: grey;
+                margin: 5px;
+                height: 15rem;
+                h4 {
+                    padding: 1rem;
+                    background-color: #f0f0f3;
+                    color: #3490dc;
+                }
+                .elem {
+                    .button {
+                        @include flex-col;
+                        .right {
+                            padding: 5px;
+                            margin: 5px;
+                        }
+                        button {
+                            @include btn;
+                            margin-left: 1rem;
+                            // background-color: aqua;
+                            cursor: pointer;
+                            // border-radius: 30%;
+                        }
+                    }
+                }
+            }
+            .main__elements {
+                border: 2px solid #fafafb;
+                margin: 5px;
+                height: 12rem;
+                h4 {
+                    padding: 1rem;
+                    background-color: #f0f0f3;
+                    color: #3490dc;
+                }
+                .elements__theme__color {
+                    margin: 1rem;
+                    border: 2px solid #fafafb;
+                    h5 {
+                        background-color: #f0f0f3;
+                    }
+                    .color {
+                        display: flex;
+                        margin: 1rem;
+                        gap: 1.5rem;
+                        .red {
+                            width: 2rem;
+                            height: 2rem;
+                            background-color: #3490dc;
+                        }
+                        .blue {
+                            width: 2rem;
+                            height: 2rem;
+                            background-color: red;
+                        }
+                        .orange {
+                            width: 2rem;
+                            height: 2rem;
+                            background-color: orange;
+                        }
+                    }
+                }
+                .elements__header {
+                    margin: 1rem;
+                    border: 2px solid #fafafb;
+                    h5 {
+                        background-color: #f0f0f3;
+                    }
+                    .bg_setting {
+                        margin: 1rem;
+                        gap: 1rem;
+                        display: flex;
+                        background-color: #f0f0f3;
+                    }
+                    .color {
+                        display: flex;
+                        margin: 1rem;
+                        gap: 1.5rem;
+                        .red {
+                            width: 2rem;
+                            height: 2rem;
+                            background-color: #3490dc;
+                        }
+                        .blue {
+                            width: 2rem;
+                            height: 2rem;
+                            background-color: red;
+                        }
+                        .orange {
+                            width: 2rem;
+                            height: 2rem;
+                            background-color: orange;
+                        }
+                    }
+                }
+                .elements__main {
+                    @extend .elements__header;
+                }
+                .elements__footer {
+                    @extend .elements__header;
+                }
+            }
+        }
+        aside {
+            @include grid-row(1fr 3fr);
+            text-align: center;
+            .main_section {
+                @include grid-row(0.2fr 2fr);
+                background: #e8e9e8;
+                #btn {
+                    display: flex;
+                    justify-content: end;
+                    background: #f6f6f7;
+                    a {
+                        border: 1px solid black;
+                        background-color: white;
+                        color: black;
+                        margin: 9px;
+                        font-size: 1rem;
+                        cursor: pointer;
+                        text-decoration: none;
+                        &.save_btn {
+                            background-color: #3490dc;
+                            padding: 0.5rem;
+                            width: 4rem;
+                            border: none;
+                            color: white;
+                            border-radius: 5px;
+                        }
+                        &.publish_btn {
+                            background-color: #38c073;
+                            padding: 0.5rem;
+                            width: 4rem;
+                            border: none;
+                            color: white;
+                            border-radius: 5px;
+                        }
+                        &.cncl {
+                            background-color: #6d747d;
+                            padding: 0.5rem;
+                            width: 4rem;
+                            border-radius: 5px;
+                            border: none;
+                            color: white;
+                        }
+                    }
+                }
+                .bx1 {
+                    display: flex;
+                    gap: 5rem;
+                    .dargg {
+                        @include dargg(33%, 9rem);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 4px dashed #fafafb;
+                    }
+                }
+            }
+
+            .main_part {
+                @include grid-column(2fr 1fr);
+                padding: 2px;
+                .background {
+                    @include grid-row(2fr 1fr);
+                    grid-gap: 0.7rem;
+                    margin: 5px;
+                    .img_sec {
+                        border: 2px solid #fafafb;
+                        text-align: center;
+                        gap: 1rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        input {
+                            display: block;
+                            border: 2px solid #fafafb;
+                            padding: 0.5rem;
+                            text-align: center;
+                            // width: 100%;
+                        }
+                        #bannerPreview {
+                            // height: 100%;
+                            width: 100%;
+                            display: none;
+                        }
+                    }
+                    .foot_sec {
+                        .foot {
+                            display: flex;
+                            background: #e8e9e8;
+                            gap: 2rem;
+                        }
+                        .dargg {
+                            display: flex;
+                            justify-content: center;
+                            margin: 5px;
+                            width: 50%;
+                            height: 9.64rem;
+                            border: 4px dashed #fafafb;
+                        }
+                    }
+                }
+                .doc_sec {
+                    margin: 5px;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    border: 2px solid #fafafb;
+                    .fa-solid {
+                        width: 1rem;
+                        color: black;
+                    }
+                    .inpt_elem {
+                        height: 90%;
+                        p {
+                            color: orangered;
+                            font-size: 1.6rem;
+                        }
+                    }
+                    .div_input {
+                        display: flex;
+                        flex-direction: column;
+                        margin: 2rem;
+                        background-color: #f1f0f1;
+                        border: none;
+                        .edit_flex {
+                            display: flex;
+                            margin: 0.5rem;
+                            justify-content: space-between;
+                        }
+                        input {
+                            width: 90%;
+                            border: none;
+                            margin: 0.5rem;
+                            padding: 0.2rem;
+                        }
+                    }
+                    #inp {
+                        padding: 0.5rem;
+                        width: 100%;
+                        border: none;
+                        background: #6d747d;
+                        color: white;
+                    }
+                    .radioBox {
+                        display: flex;
+                        align-items: center;
+                        background-color: #f1f0f1;
+                        border: 1px solid;
+                        margin: 2rem;
+                        height: 4rem;
+                        input {
+                            margin: 1rem;
+                        }
+                        .btnFlex {
+                            position: relative;
+                            top: -19px;
+                            left: 15.5rem;
+                        }
+                    }
+                    #checkInp {
+                        display: flex;
+                        align-items: center;
+                        background-color: #f1f0f1;
+                        border: 1px solid;
+                        margin: 2rem;
+                        height: 4rem;
+                        input {
+                            margin: 1rem;
+                        }
+                        .btnFlex {
+                            position: relative;
+                            top: -19px;
+                            left: 4.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.label {
+    background: red;
+    display: block;
+    width: 50%;
+}

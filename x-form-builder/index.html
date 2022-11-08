@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Form Builder </title>
+</head>
+
+<body>
+    <div class="input_edit_popup">
+        <div>
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+            <p>Edit Input field</p>
+        </div>
+        <form action="" class="form_Elements">
+            <label for="name" class="check_box"><input type="checkbox">Label</label>
+            <input type="text" placeholder="name" name="label" class="inc_width">
+            <label for="place">Placeholder</label>
+            <input type="text" placeholder="sirName" name="Placeholder" class="inc_width">
+            <label for="Input">Input Type</label>
+            <select class="inc_width" name="InputType">
+                <option>Text</option>
+                <option>Radio</option>
+                <option>Checkbox</option>
+            </select>
+
+            <label for="Required">Input Required</label>
+            <select class="inc_width" name="InputRequired">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            <input type="button" value="Clear" class="btn_flex colorbtn">
+            <input type="button" value="Save Changes" class="btn_flex colorSave">
+        </form>
+    </div>
+    <div class="container">
+        <nav class="top_bar">
+            <a href="#">Home</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Registered User</a>
+            <a href="#">Demo</a>
+        </nav>
+        <main>
+            <div class="custom_elements">
+                <h2>Custom Elements</h2>
+                <div class="form_element">
+                    <h4>Form Element:</h4>
+                    <div class="elem">
+                        <div class="button">
+                            <div class="right">
+                                <button draggable="true" class="bts" id="add_input"><i
+                                        class="fa-solid fa-image"></i>Logo
+                                </button>
+                                <button draggable="true" class="bts" id="input"><i class="fa-solid fa-image"></i>Input
+                                </button>
+                            </div>
+                            <div class="right">
+                                <button class="bts" draggable="true" id="radioBtn"><i
+                                        class="fa-solid fa-circle-dot"></i>Radio </button>
+                                <button class="bts" draggable="true" id="boxBtn"><i
+                                        class="fa-solid fa-square-check"></i>Checkbox </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__elements">
+                    <h4>Theme Settings</h4>
+                    <div class="elements__theme__color">
+                        <h5>Theme color:</h5>
+                        <div class="color">
+                            <div class="red"></div>
+                            <div class="blue"></div>
+                            <div class="orange"></div>
+                            <input type="color">
+                        </div>
+
+                    </div>
+
+                    <div class="elements__header">
+                        <h5>Header</h5>
+                        <div class="bg_setting">
+                            <input type="radio">
+                            <h6>Background Color</h6>
+                        </div>
+                        <div class="color">
+
+                            <div class="red"></div>
+                            <div class="blue"></div>
+                            <div class="orange"></div>
+                            <input type="color">
+                        </div>
+                        <div class="bg_img">
+                            <h6>Background Image</h6>
+                            <input type="file">
+                        </div>
+                    </div>
+                    <div class="elements__main">
+                        <h5>Main</h5>
+                        <div class="bg_setting">
+                            <input type="radio">
+                            <h6>Background Color</h6>
+                        </div>
+                        <div class="color">
+
+                            <div class="red"></div>
+                            <div class="blue"></div>
+                            <div class="orange"></div>
+                            <input type="color">
+                        </div>
+                        <div class="bg_img">
+                            <h6>Background Image</h6>
+                            <input type="file">
+                        </div>
+                    </div>
+                    <div class="elements__footer">
+                        <h5>Footer</h5>
+                        <div class="color">
+
+                            <div class="red"></div>
+                            <div class="blue"></div>
+                            <div class="orange"></div>
+                            <input type="color">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside>
+                <div class="main_section">
+                    <div id="btn">
+                        <a href="#" class="save_btn" onclick="savePage()">Save</a>
+                        <a href="preview.html" class="publish_btn">Preview</a>
+                        <a href="#" class="cncl" onclick="cancelData()">Cancel</a>
+                    </div>
+                    <div class="bx1">
+                        <div id="draggable_space" class="dargg draggable_space"></div>
+                        <div class="dargg draggable_space"></div>
+                        <div class="dargg draggable_space"></div>
+                    </div>
+
+                </div>
+                <div class="main_part">
+                    <div class="background">
+                        <div class="img_sec">
+                            <p id="banner_detail">Choose webcast banner image to upload.
+                                If no banner image is uploaded then the login form will be displayed in the
+                                centre
+                            </p>
+                            <input type="file" id="bannerImg">
+                            <img src="" alt="" id="bannerPreview">
+                        </div>
+                        <div class="foot_sec">
+
+                            <div class="foot">
+                                <div class="dargg"></div>
+                                <div class="dargg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doc_sec">
+                        <div class="inpt_elem">
+                            <p>Demo Sec.</p>
+                        </div>
+
+                        <div class="submit_btn">
+                            <button id="inp" onclick="submit()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+        </main>
+    </div>
+
+    <script src="script/model.js"></script>
+    <script src="script/service.js"></script>
+    <script src="script/component.js"></script>
+    <script src="script/main.js"></script>
+
+</body>
+
+
+</html>

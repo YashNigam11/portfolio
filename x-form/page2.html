@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container_login">
+        <header>
+            <div class="logo">
+                <div class="logo-image"> <img src="assets/logo.png" alt="logo-image" class="logo-pic"></div>
+               
+            </div>
+            <div class="login_profile">
+                <i class="fa-regular fa-bell"></i>
+                <img src="assets/aunt.jpg" alt="profile-photo">
+                <div class="profile-detail">
+                    <h4>Sumanto</h4>
+                    <p>sumanto@logitex.com</p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="slidebar">
+                <div class="sliderbar-items">
+                    <div>
+                        <i class="fa-solid fa-house-user"></i><a href="#">Home</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-user"></i><a href="#">Account Settings</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-bars-progress"></i><a href="#">All Task</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-file-circle-check"></i><a href="#">Current Task</a>
+                    </div>
+                </div>
+                <div class="logout_btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <input type="button" value="Log Out">
+                </div>
+            </div>
+            <div class="main_prfl">
+                <div class="profile">
+                    <div class="main-profile"></div>
+                    <div class="main-icons">
+                        <div class="edit">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <input type="button" value="Edit Photo">
+                        </div>
+                        <div class="delete">
+                            <i class="fa-solid fa-trash"></i>
+                            <input type="button" value="Delete">
+                        </div>
+
+                    </div>
+                    <div class="password">
+                        <h3>Password</h3>
+                        <br>
+                        <hr>
+                        <br>
+                        <p>Need to reset your password?<br>
+                            No problem, just click below to get started!
+                        </p>
+                        <input type="button" value="Reset my password" id="reset">
+                    </div>
+                    <div class="main_buttons">
+                        <div class="cancel"><input type="button" value="Cancel"></div>
+                        <div class="save"><input type="submit" value="Save Changes" onclick="saveBtn()"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="personal_info">
+                <div class="info">
+                    <h3>Personal Information</h3>
+                    <hr>
+                    <div class="personal-intro">
+                        <label for="fname">First Name</label>
+                        <input type="text" placeholder="First Name" name="fname" value ="" class="fname" >
+                        <label for="lname">Last Name</label>
+                        <input type="text" placeholder="Last Name" name="lname" value ="" class="lname" >
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Email" name="email" value ="" class="email" >
+                        <label for="phone">Phone</label>
+                        <input type="phone" placeholder="Phone" name="phone" value ="" class="phone">
+                    </div>
+                </div>
+                <div class="mail">
+                    <h3>Mailing Address</h3>
+                    <hr>
+                    <div class="mailing-data">
+                        <label for="address">Address</label>
+                        <input type="text" placeholder="Address" name="address" >
+                        <label for="address">Address 2</label>
+                        <input type="text" placeholder="Address 2" name="address" >
+
+                        <div class="city-state">
+                            <div>
+                                <label for="city">City</label>
+                                <input type="text" placeholder="City" name="city" >
+
+                            </div>
+                            <div>
+                                <label for="state">State</label>
+                                <input type="text" placeholder="State" name="state" >
+                            </div>
+
+                        </div>
+                        <div class="code-country">
+                            <div>
+                                <label for="zipcode">Zip code</label>
+                                <input type="number" placeholder="Zip code" name="zipcode" >
+                            </div>
+                            <div>
+                                <label for="country">Country</label>
+                                <input type="text" placeholder="Country" name="country">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="script/validations.js"></script>
+</body>
+
+</html>

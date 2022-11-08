@@ -1,0 +1,25 @@
+@mixin grid-column($section-column) {
+    display: grid;
+    grid-template-columns: $section-column;
+}
+@mixin grid-row($section-row) {
+    display: grid;
+    grid-template-rows: $section-row;
+}
+@mixin flex-col{
+    display: flex;
+    flex-direction: column;
+}
+@mixin bg-color{
+    border: 2px solid black;
+}
+@mixin btn {
+    height: 5rem;
+    width: 40%;
+}
+@mixin dargg($w , $h) {
+    margin: 5px;
+    width: $w;
+    height: $h;
+    border: 2px solid red;
+}

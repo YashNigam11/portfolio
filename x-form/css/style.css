@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  width: 100%;
+  color: #515d82;
+}
+.container .img-gallery-wrapper {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+}
+.container .img-gallery-wrapper .image-gallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.container .img-gallery-wrapper .svg-image {
+  width: 6rem;
+  position: absolute;
+  bottom: 4rem;
+  left: 4.25rem;
+}
+.container .img-gallery-wrapper .image-title {
+  position: absolute;
+  top: 7.8rem;
+  color: #d2deea;
+  left: 4.25rem;
+  width: 46rem;
+  font-size: 4.3rem;
+  line-height: 6.37rem;
+}
+.container .img-gallery-wrapper .image-title strong {
+  color: white;
+}
+.container .img-gallery-wrapper .gallery {
+  position: absolute;
+  left: 376px;
+  bottom: 30px;
+  display: flex;
+}
+.container .img-gallery-wrapper .gallery div {
+  height: 16px;
+  border-radius: 50%;
+  width: 16px;
+  border: 2px solid #ffffff;
+  margin: 0.2rem;
+}
+.container .login-credential {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .login-credential .heading {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+}
+.container .login-credential .heading sup {
+  font-size: 0.6rem;
+}
+.container .login-credential label {
+  display: block;
+  font-weight: bold;
+}
+.container .login-credential #name-ele {
+  margin-top: 2rem;
+}
+.container .login-credential input {
+  width: 23.8rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid gray;
+  border-radius: 0.3rem;
+}
+.container .login-credential #join-btn {
+  background-color: #515d82;
+  color: white;
+  padding: 1rem;
+  width: 24.8rem;
+  margin-top: 2rem;
+  display: block;
+}
+.container .login-credential .label-elem {
+  margin-top: 2.12em;
+}
+.container .login-credential .checkbox-data {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.3rem;
+  gap: 10px;
+}
+.container .login-credential .checkbox-data #checkbox {
+  width: 1rem;
+  margin-top: 0;
+}
+.container .login-credential .checkbox-data p {
+  font-size: 0.8rem;
+}
+.container .login-credential .checkbox-data p span {
+  margin-left: 11rem;
+}
+.container .login-credential .login-data {
+  margin-top: 7.53rem;
+  text-align: center;
+}
+.container .login-credential .login-data p {
+  font-size: 0.9rem;
+}
+.container .login-credential .login-data input {
+  border: 2px solid gray;
+  width: 24.8rem;
+  padding: 1rem;
+}
+
+.container_login {
+  height: 100vh;
+  color: #515d82;
+}
+.container_login header {
+  display: flex;
+  justify-content: space-between;
+}
+.container_login header .logo {
+  display: flex;
+  margin: 1rem;
+}
+.container_login header .logo .logo-pic {
+  width: 40%;
+}
+.container_login header .login_profile {
+  display: flex;
+  gap: 12px;
+  margin: 1rem;
+  color: black;
+}
+.container_login header .login_profile i {
+  margin: 1rem;
+}
+.container_login header .login_profile img {
+  border-radius: 50%;
+}
+.container_login main {
+  display: grid;
+  grid-template-columns: 2fr 2.7fr 5fr;
+}
+.container_login main .slidebar {
+  background: #515d82;
+}
+.container_login main .slidebar .sliderbar-items {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin: 2rem;
+  margin-top: 3.6rem;
+}
+.container_login main .slidebar .sliderbar-items a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+.container_login main .slidebar .sliderbar-items div {
+  margin: 1rem;
+  width: 100%;
+}
+.container_login main .slidebar .logout_btn {
+  color: white;
+  margin: 2rem;
+  border: 1px solid #f7f7f7;
+  border-radius: 8px;
+  padding: 0.7rem;
+  margin-top: 38.4rem;
+}
+.container_login main .slidebar .logout_btn input {
+  border: none;
+  background-color: #515d82;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+.container_login main .main_prfl {
+  border: 1px solid #e1e1e1;
+}
+.container_login main .main_prfl .profile {
+  background: white;
+}
+.container_login main .main_prfl .profile .main-profile {
+  margin: 5.56rem;
+  border-radius: 50%;
+  background-color: #515d82;
+  height: 16rem;
+  width: 16rem;
+  margin-top: 4.93rem;
+}
+.container_login main .main_prfl .profile .main-icons {
+  display: flex;
+  margin: 3.75rem;
+  margin-top: 2.8rem;
+  gap: 1rem;
+}
+.container_login main .main_prfl .profile .main-icons .edit {
+  background-color: #d2deea;
+  color: #515d82;
+  width: 100%;
+  padding: 1rem;
+}
+.container_login main .main_prfl .profile .main-icons .edit input {
+  border: none;
+  background-color: #d2deea;
+  color: #515d82;
+}
+.container_login main .main_prfl .profile .main-icons .delete {
+  background-color: #d2deea;
+  color: #515d82;
+  width: 100%;
+  padding: 1rem;
+}
+.container_login main .main_prfl .profile .main-icons .delete input {
+  border: none;
+  background-color: #d2deea;
+  color: #515d82;
+}
+.container_login main .main_prfl .profile .password {
+  margin: 3.75rem;
+  margin-top: 5.93rem;
+}
+.container_login main .main_prfl .profile .password hr {
+  width: 86%;
+}
+.container_login main .main_prfl .profile .password input {
+  border: none;
+  margin-top: 13px;
+}
+.container_login main .main_prfl .profile .password #reset {
+  background-color: #515d82;
+  padding: 1rem;
+  color: #d2deea;
+  width: 100%;
+}
+.container_login main .main_prfl .main_buttons {
+  display: flex;
+  margin: 3.75rem;
+  gap: 1rem;
+  margin-top: 8.2rem;
+}
+.container_login main .main_prfl .main_buttons .cancel {
+  background-color: #d2deea;
+  color: #515d82;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+.container_login main .main_prfl .main_buttons .cancel input {
+  border: none;
+  background-color: #d2deea;
+  color: #515d82;
+}
+.container_login main .main_prfl .main_buttons .save {
+  background-color: #515d82;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+.container_login main .main_prfl .main_buttons .save input {
+  border: none;
+  background-color: #515d82;
+  color: #d2deea;
+}
+.container_login main .personal_info {
+  background: #f7f7f7;
+  border: 1px solid #d2deea;
+}
+.container_login main .personal_info .info {
+  margin-top: 3.18rem;
+  margin-left: 3.18rem;
+}
+.container_login main .personal_info .info hr {
+  margin-top: 14px;
+  width: 90%;
+}
+.container_login main .personal_info .info .personal-intro {
+  margin-top: 2.12rem;
+}
+.container_login main .personal_info .info .personal-intro label {
+  font-weight: bold;
+  display: block;
+  margin-top: 1.56rem;
+}
+.container_login main .personal_info .info .personal-intro input {
+  margin-top: 9px;
+  padding: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #bdbdbd;
+  width: 88%;
+  border-radius: 8px;
+}
+.container_login main .personal_info .mail {
+  margin-top: 2.68rem;
+  margin-left: 3.18rem;
+}
+.container_login main .personal_info .mail hr {
+  margin-top: 14px;
+  width: 90%;
+}
+.container_login main .personal_info .mail .mailing-data {
+  margin-top: 2.12rem;
+}
+.container_login main .personal_info .mail .mailing-data label {
+  font-weight: bold;
+  display: block;
+  margin-top: 1.56rem;
+}
+.container_login main .personal_info .mail .mailing-data input {
+  margin-top: 9px;
+  padding: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #bdbdbd;
+  width: 88%;
+  border-radius: 8px;
+}
+.container_login main .personal_info .mail .mailing-data .city-state {
+  display: flex;
+  gap: 18px;
+}
+.container_login main .personal_info .mail .mailing-data .city-state div {
+  width: 45%;
+}
+.container_login main .personal_info .mail .mailing-data .city-state div label {
+  display: block;
+}
+.container_login main .personal_info .mail .mailing-data .city-state div input {
+  width: 90%;
+}
+.container_login main .personal_info .mail .mailing-data .code-country {
+  display: flex;
+  gap: 1rem;
+}
+.container_login main .personal_info .mail .mailing-data .code-country div {
+  width: 45%;
+}
+.container_login main .personal_info .mail .mailing-data .code-country div label {
+  display: block;
+}
+.container_login main .personal_info .mail .mailing-data .code-country div input {
+  width: 90%;
+}
+
+@media screen and (max-width: 820px) {
+  .container_login html {
+    font-size: 60%;
+  }
+  .container_login main {
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-areas: "slidebar main_prfl" "personal_info personal_info";
+  }
+  .container_login main .slidebar {
+    grid-area: slidebar;
+  }
+  .container_login main .main_prfl {
+    grid-area: main_prfl;
+  }
+  .container_login main .personal_info {
+    grid-area: personal_info;
+  }
+}
+@media screen and (max-width: 820px) {
+  .container {
+    background-color: transparent;
+  }
+  .container .img-gallery-wrapper {
+    position: relative;
+    opacity: 0.4;
+  }
+  .container .login-credential {
+    position: absolute;
+    margin-top: 22.5rem;
+    margin-left: 14rem;
+    margin-right: 8rem;
+  }
+}/*# sourceMappingURL=style.css.map */

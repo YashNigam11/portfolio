@@ -1,0 +1,262 @@
+.container_login {
+    height: 100vh;
+    color: #515d82;
+    header {
+        display: flex;
+        justify-content: space-between;
+        .logo {
+            display: flex;
+            margin: 1rem;
+            .logo-pic{
+                width: 40%;
+            }
+        }
+        .login_profile {
+            display: flex;
+            gap: 12px;
+            margin: 1rem;
+            color: black;
+            i {
+                margin: 1rem;
+            }
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+    main {
+        display: grid;
+        grid-template-columns: 2fr 2.7fr 5fr;
+        // grid-gap: 1rem;
+        .slidebar {
+            background: #515d82;
+            .sliderbar-items {
+                display: flex;
+                flex-direction: column;
+                color: white;
+                margin: 2rem;
+                margin-top: 3.6rem;
+                a {
+                    color: white;
+                    text-decoration: none;
+                    margin-left: 1rem;
+                }
+                div {
+                    margin: 1rem;
+                    width: 100%;
+                }
+            }
+            .logout_btn {
+                color: white;
+                margin: 2rem;
+                border: 1px solid #f7f7f7;
+                border-radius: 8px;
+                padding: 0.7rem;
+                margin-top: 38.4rem;
+                // text-align: center;
+                input {
+                    border: none;
+                    background-color: #515d82;
+                    color: #ffffff;
+                    font-size:1.1rem ;
+                    // width: 50%;
+                }
+            }
+        }
+        .main_prfl {
+            border: 1px solid #e1e1e1;
+
+            .profile {
+                background: white;
+                .main-profile {
+                    margin: 5.56rem;
+                    border-radius: 50%;
+                    background-color: #515d82;
+                    height: 16rem;
+                    width: 16rem;
+                    margin-top: 4.93rem;
+                }
+                .main-icons {
+                    display: flex;
+                    margin: 3.75rem;
+                    margin-top: 2.8rem;
+                    gap: 1rem;
+                    .edit {
+                        background-color: #d2deea;
+                        color: #515d82;
+                        width: 100%;
+                        padding: 1rem;
+                        input {
+                            border: none;
+                            background-color: #d2deea;
+                            color: #515d82;
+                        }
+                    }
+                    .delete {
+                        background-color: #d2deea;
+                        color: #515d82;
+                        width: 100%;
+                        padding: 1rem;
+                        input {
+                            border: none;
+                            background-color: #d2deea;
+                            color: #515d82;
+                        }
+                    }
+                }
+                .password {
+                    margin: 3.75rem;
+                    margin-top: 5.93rem;
+                    
+                    hr {
+                        width: 86%;
+                    }
+                    input {
+                        border: none;
+                        margin-top: 13px;
+                    }
+                    #reset {
+                        background-color: #515d82;
+                        padding: 1rem;
+                        color: #d2deea;
+                        width: 100%;
+                    }
+                }
+            }
+            .main_buttons {
+                
+                display: flex;
+                margin: 3.75rem;
+                gap: 1rem;
+                margin-top: 8.2rem;
+                .cancel {
+                    background-color: #d2deea;
+                    color: #515d82;
+                    width: 100%;
+                    text-align: center;
+                    padding: 1rem;
+                    input {
+                        border: none;
+                        background-color: #d2deea;
+                        color: #515d82;
+                    }
+                }
+                .save {
+                    background-color:  #515d82;
+                    // color: #d2deea;
+                    width: 100%;
+                    text-align: center;
+                    padding: 1rem;
+                    input {
+                        border: none;
+                        background-color: #515d82;
+                        color: #d2deea;
+                    }
+                }
+            }
+        }
+        .personal_info {
+            background: #f7f7f7;
+            border: 1px solid #d2deea;
+            .info {
+                margin-top: 3.18rem;
+                margin-left: 3.18rem;
+                hr {
+                    margin-top: 14px;
+                    width: 90%;
+                }
+                .personal-intro {
+                    margin-top: 2.12rem;
+
+                    label {
+                        font-weight: bold;
+                        display: block;
+                        margin-top: 1.56rem;
+                    }
+                    input {
+                        margin-top: 9px;
+                        padding: 0.5rem;
+                        background: #ffffff;
+                        border: 1px solid #bdbdbd;
+                        width: 88%;
+                        border-radius: 8px;
+                    }
+                }
+            }
+            .mail {
+                margin-top: 2.68rem;
+                margin-left: 3.18rem;
+                hr {
+                    margin-top: 14px;
+                    width: 90%;
+                }
+                .mailing-data {
+                    margin-top: 2.12rem;
+                    label {
+                        font-weight: bold;
+                        display: block;
+                        margin-top: 1.56rem;
+                    }
+                    input {
+                        margin-top: 9px;
+                        padding: 0.5rem;
+                        background: #ffffff;
+                        border: 1px solid #bdbdbd;
+                        width: 88%;
+                        border-radius: 8px;
+                    }
+                    .city-state {
+                        display: flex;
+                        // width: 100%;
+                        gap: 18px;
+                        div {
+                            width: 45%;
+                            label {
+                                display: block;
+                            }
+                            input {
+                                width: 90%;
+                            }
+                        }
+                    }
+                    .code-country {
+                        display: flex;
+                        gap: 1rem;
+                        div {
+                            width: 45%;
+                            label {
+                                display: block;
+                            }
+                            input {
+                                width: 90%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 820px) {
+    .container_login {
+        html {
+            font-size: 60%;
+        }
+        main {
+            grid-template-columns: 0.5fr 1fr;
+            grid-template-areas:
+                "slidebar main_prfl"
+                "personal_info personal_info";
+            .slidebar {
+                grid-area: slidebar;
+            }
+            .main_prfl {
+                grid-area: main_prfl;
+            }
+
+            .personal_info {
+                grid-area: personal_info;
+            }
+        }
+    }
+}

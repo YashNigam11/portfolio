@@ -1,0 +1,56 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+.header_pic {
+  display: flex;
+  justify-content: center;
+}
+header img {
+  max-height: 9rem;
+}
+footer img {
+  max-height: 9rem;
+}
+
+main {
+  position: relative;
+}
+.banner {
+  height: 100%;
+}
+.inputFields {
+  display: flex;
+  justify-content: center;
+  background-color: bisque;
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+}
+
+#bannerImg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  /* display: none; */
+}
+.formsElement {
+  padding: 4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

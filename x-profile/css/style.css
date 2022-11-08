@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  display: grid;
+  justify-content: center;
+  background-color: brown;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.container {
+  margin-top: 1.8rem;
+  width: 50vw;
+  background-color: #f0f8ff;
+  display: grid;
+  grid-template-columns: 2.7fr 1.3fr;
+}
+.main__profile {
+  height: 10rem;
+}
+.profile__header__inner-sec-1 {
+  background-color: #202020;
+  display: flex;
+  top: 0;
+  left: 0;
+  height: 10.3rem;
+  width: 5.5rem;
+}
+.profile__header__inner-sec-2 {
+  background-color: #ffd801;
+  position: relative;
+  left: 4.3rem;
+  width: 70%;
+  top: -7.7rem;
+  padding: 0.7rem;
+}
+main {
+  display: flex;
+}
+.main__inner__bg {
+  background-color: #ffd801;
+  margin-top: 0.3rem;
+  width: 3.3rem;
+}
+.main__details {
+  margin-top: 1.5rem;
+  margin-left: 3.1rem;
+}
+.profile-sec {
+  padding: 0.3rem;
+}
+.details {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+.work-experience {
+  padding: 0.3rem;
+}
+.work-experience__content {
+  margin-top: 3.1rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.experience {
+  padding: 1rem;
+  border-left: 2px solid #000;
+  position: relative;
+}
+.experience::before {
+  content: " ";
+  border-radius: 50%;
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: #202020;
+  position: absolute;
+  left: -0.3rem;
+}
+.work-experience__duration {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.rectangle {
+  color: #f0f8ff;
+  margin-top: 0.4rem;
+  height: 2.5rem;
+  width: 3.2rem;
+  background-color: #202020;
+}
+.rectangle::after {
+  content: "";
+  margin-top: -1.45rem;
+  width: 0;
+  height: 0;
+  border-top: 1.56rem solid transparent;
+  border-left: 1.25rem solid #202020;
+  border-bottom: 1.56rem solid transparent;
+  position: absolute;
+  margin-left: 1rem;
+}
+h5,
+ul {
+  color: grey;
+}
+.experience ul li {
+  margin-left: 1.1rem;
+}
+.container__profile {
+  color: #fff;
+  background-color: #202020;
+  display: flex;
+  flex-direction: column;
+}
+.profile__content {
+  margin-top: 2rem;
+}
+.photo-border {
+  border: 2px solid #ffd801;
+  height: 5.9rem;
+  width: 12.9rem;
+  margin-top: 2.7rem;
+}
+.image {
+  margin-left:4rem;
+  height: 5.4rem;
+  width: 6.3rem;
+  border-radius: 50%;
+  margin-top: 0.2rem;
+}
+.profile__title__hr {
+  color: grey;
+  width: 58%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact__hr {
+  width: 10%;
+  height: 2px;
+  background-color: #ffd801;
+  margin-left: auto;
+  margin-right: auto;
+}
+.profile__contact {
+  position: relative;
+  padding: 1rem;
+  text-align: center;
+  margin-right: 1rem;
+}
+.profile__title {
+  color: #ffd801;
+  padding: 0.3rem;
+  font-size: 1.6rem;
+}
+.fa-solid {
+  align-items: center;
+  color: #ffd801;
+  padding: 0.7rem;
+  font-size: 1.5rem;
+  display: block;
+}
+.profile__education {
+  position: relative;
+  padding: 1rem;
+  text-align: center;
+  margin-right: 1rem;
+}
+.education__detail {
+  padding: 1rem;
+}
+.profile__skills {
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+  margin-right: 1rem;
+}
+.skills__data__type {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffd801;
+  border: 13px solid #202020;
+  padding: 1rem;
+}
+.skills__data__type p {
+  color: #202020;
+  font-size: 0.9rem;
+  float: left;
+}
+.hr_width {
+  margin-top: 7.5px;
+  margin-left: 5rem;
+}
+.left-flag {
+  top: 1rem;
+  left: 9%;
+  position: absolute;
+  background-color: #202020;
+  height: 44px;
+  width: 27px;
+}
+.right-flag {
+  top: 1rem;
+  position: absolute;
+  background-color: #202020;
+  height: 44px;
+  width: 27px;
+  right: 9%;
+}
+.profile__skills__data {
+  margin-top: 2rem;
+}
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 80%;
+  }
+  .profile__title {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 993px) {
+  .container {
+    margin-top: 0;
+    grid-template-columns: 1fr;
+    width: 100vw;
+  }
+  .profile__photo {
+    margin: auto;
+  }
+  .photo-border {
+    height: 9.9rem;
+    width: 10.9rem;
+  }
+  .image {
+    margin: 7px;
+    height: 8.9rem;
+    width: 9.9rem;
+  }
+  .left-flag {
+    width: 26px;
+    left: 21%;
+    height: 44px;
+  }
+  .right-flag {
+    right: 21%;
+    width: 26px;
+    height: 44px;
+  }
+  .profile__title__hr {
+    width: 50%;
+  }
+  .profile__title {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 415px) {
+  .right-flag {
+    right: 16%;
+  }
+  .left-flag {
+    left: 16%;
+  }
+}

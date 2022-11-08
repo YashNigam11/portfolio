@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Forms</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img-gallery-wrapper">
+            <img src="assets/image 2.jpg" alt="image-1" class="pic1">
+            <section class="image-title">
+                <h1><span>We make </span><strong >healing simple.</strong></h1>
+            </section>
+            <section><img src="assets/Group 260 (1).svg" alt="main-logo" class="svg-image"></section>
+            <div class="gallery">
+                <div id="picture1"></div>
+                <div id="picture2"></div>
+                <div id="picture3"></div>
+                <div id="picture4"></div>
+            </div>
+        </div>
+        <div class="login-credential">
+            <div class="heading">
+                <img src="assets/Group 260.svg" alt="logo">
+                <div class="heading-title">
+                    <h2>10xTECH<sup>TM</sup></h2>
+                </div>
+
+            </div>
+            <div class="form-elements">
+                <form action="" method = "get" id="form_elements">
+                    <label for="name" id="name-ele">Name</label>
+                    <input type="text" name="name" placeholder="Name Here" id="userName" class="fname" >
+                    <label for="email" class="label-elem ">Email</label>
+                    <input type="email" name="email" id="email" class="email"value="">
+                    <label for="password" class="label-elem">Password</label>
+                    <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" value="" class="password">
+                    <input type="submit" value="10xTech" id="join-btn" onclick="submitJoinBtn()" >
+                    <div class="checkbox-data">
+                        <input type="checkbox" name="" value="" id="checkbox">
+                        <p>I have read and accepted the <strong><u>terms & condition</u></strong></p>
+                    </div>
+
+                    <div class="login-data">
+                        <p>Already have an Account?</p>
+                        <a href="login.html"><input type="button" value="Log In" ></a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script/main.js"></script>
+    <script src="script/validations.js"></script>
+</body>
+
+</html>

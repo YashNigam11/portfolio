@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Header</title>
+</head>
+
+<body>
+    <div id="animated_div">
+        <i class="fa-solid fa-xmark cut"></i>
+        <p>Login Starts From Here</p>
+    </div>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="img">
+                    <div class="logo_img">
+                        <img src="assets/logo.png" alt="logo">
+                    </div>
+                    <div class="ham">
+                        <i class="fa-solid fa-bars" id="barsss"></i>
+                        <i class="fa-solid fa-xmark" id="cross"></i>
+                    </div>
+                </div>
+                <div class="icons">
+                    <div class="search-bar">
+                        <input type="search" id="search" placeholder="search"><i class="fa-solid fa-magnifying-glass"
+                            id="search_icon"></i>
+                    </div>
+                    <div class="nav_1">
+                        <div> <a class="animation" href="#"><i class="fa-solid fa-lock"></i>Logout</a></div>
+                        <div><a href="#"><i class="fa-solid fa-laptop"></i>Contact</a></div>
+                        <div><a href="#"><i class="fa-solid fa-user"></i>Register</a></div>
+                        <div id="myAccnt">
+                            <a href="#"> <i class="fa-solid fa-user"></i>My Account
+                                <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+                            <div class="acc_down">
+                                <li>Profile</li>
+                                <li>Logout</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="nav_2">
+                <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+                <a href="#" id="services_dropdown"><i class="fa-solid fa-laptop"></i>
+                    Services
+                </a>
+                <a href="#"><i class="fa-solid fa-life-ring"></i>Project</a>
+                <a href="#"><i class="fa-solid fa-building"></i>Client</a>
+                <a href="#" id="about_dropdown"><i class="fa-solid fa-user"></i>
+                    About <i class="fa-sharp fa-solid fa-caret-down"></i>
+                </a>
+            </div>
+            <div class="service_drop hidden">
+                <div class="service_drop_head">
+                    <p>Our are of Expertise</p>
+                </div>
+                <div class="service_drop_body">
+                    <div class="service_drop_body_ecom">
+                        <p>Ecommerce</p>
+                        <li>Web Development</li>
+                        <li>Payment Integration</li>
+                        <li>Shipment</li>
+                        <li>B2B Portal Development</li>
+                    </div>
+                    <div class="service_drop_body_webinar">
+                        <p>Webinar Solution 2</p>
+                        <li>DIY Platform for webinars</li>
+                        <li>DIY Platform for Online events</li>
+                        <li>Integration with Youtube,Facebook and Zoom 3</li>
+                    </div>
+                    <div class="service_drop_body_web_solution">
+                        <p>Web Solution</p>
+                        <li>Web Application Development in PHP,Dot NET, Angular</li>
+                        <li>Content Management System : Wordpress,Drupal,Umbraco,DotNetNuke</li>
+                    </div>
+                </div>
+            </div>
+            <div class="about_drop hidden">
+                <div class="about_head">
+                    <p>Company</p>
+                    <p>Team</p>
+                    <p>Career</p>
+                </div>
+            </div>
+            <div class="ham_content">
+                <ul>
+                    <li class="search-bar2"><input type="search" placeholder="search"></li>
+                    <hr>
+                    <li><i class="fa-solid fa-lock"></i>Login</li>
+                    <hr>
+                    <li><i class="fa-solid fa-envelope"></i>Contact</li>
+                    <hr>
+                    <li><i class="fa-solid fa-user"></i>Register</li>
+                    <hr>
+                    <li><i class="fa-solid fa-user"></i>My Account</li>
+                    <hr>
+                    <li><i class="fa-solid fa-house"></i>Home</li>
+                    <hr>
+                    <li><i class="fa-solid fa-laptop"></i>Services</li>
+                    <hr>
+                    <li><i class="fa-solid fa-life-ring"></i>Projects</li>
+                    <hr>
+                    <li><i class="fa-solid fa-building"></i>Clients</li>
+                    <hr>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <img src="assets/back.jpg" alt="background-cover">
+            <div class="section_wrapper portfolio">
+                <div class="section_header">
+                    <h2>PortFolio</h2>
+                    <div class="filter_buttons">
+                        <button class="showAll">Show All</button>
+                        <button class="ecommerce">Ecommerce</button>
+                        <button class="appsbtn">Apps</button>
+                    </div>
+                </div>
+                <div class="portfolio-cards">
+                    <div class="portfolio-card ecommerce-card">
+
+                        <div class="sliding-bg-img">
+                            <img src="assets/ecommerce1.jpg" alt="Clothing-images" class="img_configure">
+                        </div>
+
+                        <div class="sliding_image">
+                            <img src="assets/ecommerce3.jpg" alt="sliding-image" class="img_configure">
+                        </div>
+                        <div class="sliding-circle"></div>
+
+                        <h3 class="card_data">Clothing</h3>
+                        <p class="card_data">Lorem ipsum dolor </p>
+                    </div>
+                    <div class="card ecommerce-card">
+                        <div class="magnifier_image">
+                            <img src="assets/ecommerce2.jpg" alt="Clothing-images" class="img_configure non-magnified">
+                            <img src="assets/ecommerce2.jpg" alt="magnifier_image" id="maginfied">
+                        </div>
+                        <h3 class="card_data">Clothing</h3>
+                        <p class="card_data">Lorem ipsum dolor </p>
+                    </div>
+                    <div class="card ecommerce-card flip-card">
+                        <div class="flip-wrp">
+                            <div class="flip-box">
+                                <div class="flip-front-side">
+                                    <img src="assets/ecommerce2.jpg" alt="Fashion Image" class="img_configure">
+                                </div>
+                                <div class="flip-back-side">
+                                    <h3>Fashion</h3>
+                                    <p>Lorem ipsum dolor </p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="card_data">Fast</h3>
+                        <p class="card_data">Lorem ipsum dolor </p>
+                    </div>
+                    <div class="card app-card">
+                        <img src="assets/apps1.jpg" alt="Art-Direct-images" class="img_configure " id="shake_img">
+                        <div class="shake_effect">
+                            <h2 class="card_data ">Mike Ross</h2>
+                            <h4 class="card_data styling">Art Director</h4>
+                            <p class="card_data">Some Text that descirbes me lorem ipsum ipsum lorem</p>
+                            <p class="card_data">example@example.com</p>
+                            <button class="card_data card_btn">Contact</button>
+                        </div>
+                    </div>
+                    <div class="cards app-card">
+                        <img src="assets/apps2.jpg" alt="Art-Direct-images" class="img_configure box_shadow_image"
+                            id="men_hover">
+                        <div class="app-card-details">
+                            <h2 class="card_data">Mike Ross</h2>
+                            <h4 class="card_data styling">Art Director</h4>
+                            <p class="card_data">Some Text that descirbes me lorem ipsum ipsum lorem</p>
+                            <p class="card_data">example@example.com</p>
+                            <button class="card_data card_btn">Contact</button>
+                        </div>
+                    </div>
+                    <div class="cards app-card3 app-card">
+                        <div class="slider">
+                            <p>Hello world</p>
+                        </div>
+                        <img src="assets/apps3.jpg" alt="Art-Direct-images"
+                            class="img_configure box_shadow_image newAnima">
+                        <div class="app-card-details">
+                            <h2 class="card_data ">Mike Ross</h2>
+                            <h4 class="card_data styling">Art Director</h4>
+                            <p class="card_data">Some Text that descirbes me lorem ipsum ipsum lorem</p>
+                            <p class="card_data">example@example.com</p>
+                            <button class="card_data card_btn">Contact</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-card ecommerce-card">
+                        <div class="sliding-bg-img">
+                            <img src="assets/calc.jpeg" alt="Clothing-images" class="img_configure">
+                        </div>
+                        <h3 class="card_data">Calculator</h3>
+                        <p class="card_data">Web Development</p>
+                        <a href="calci/index.html"><button class="card_data card_btn">View</button></a>
+                    </div>
+                    <div class="portfolio-card ecommerce-card">
+                        <div class="sliding-bg-img">
+                            <img src="assets/forms.png" alt="Clothing-images" class="img_configure">
+                        </div>
+                        <h3 class="card_data">Forms</h3>
+                        <p class="card_data">Web Development</p>
+                        <!-- <p class="card_data">Some Text that descirbes me lorem ipsum ipsum </p> -->
+                        <a href="x-form/index.html"><button class="card_data card_btn">View</button></a>
+                    </div>
+                    <div class="portfolio-card ecommerce-card">
+                        <div class="sliding-bg-img">
+                            <img src="assets/profile.jpeg" alt="Clothing-images" class="img_configure">
+                        </div>
+                        <h3 class="card_data">Profile</h3>
+                        <p class="card_data">Web Development</p>
+                        <a href="x-profile/index.html"><button class="card_data card_btn">View</button></a>
+                    </div>
+                    <div class="portfolio-card ecommerce-card">
+                        <div class="sliding-bg-img">
+                            <img src="assets/form builder.jpg" alt="Clothing-images" class="img_configure">
+                        </div>
+                        <h3 class="card_data">Form Builder</h3>
+                        <p class="card_data">Web Development</p>   
+                        <a href="x-form-builder/index.html"><button class="card_data card_btn">View</button></a>
+                    </div>
+            </div>
+    </div>
+    </main>
+    </div>
+    <script src="script/main.js"></script>
+</body>
+
+</html>
