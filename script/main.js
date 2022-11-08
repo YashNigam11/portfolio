@@ -42,11 +42,13 @@ let formBuilder = document.querySelector('.form-builder-cards')
 let forms = document.querySelector('.form-cards')
 let resume = document.querySelector('.resume-cards')
 let calculator = document.querySelector('.calci-cards')
+let clone = document.querySelector('.clone')
 
 let calci = document.querySelector(".calci")
 let xFrom = document.querySelector(".x-from")
 let builder = document.querySelector(".builder")
 let resumeWeb = document.querySelector(".resumeWeb")
+let spotify = document.querySelector(".clonePlyr")
 
 allProject.addEventListener('click', () => {
  
@@ -54,30 +56,43 @@ allProject.addEventListener('click', () => {
   calci.style.display = "block";
   resumeWeb.style.display = "block";
   xFrom.style.display = "block";
+  spotify.style.display = "block";
+
 })
 formBuilder.addEventListener('click', () => {
   builder.style.display = "block";
   calci.style.display = "none";
   resumeWeb.style.display = "none";
   xFrom.style.display = "none";
+  spotify.style.display = "none";
 })
 forms.addEventListener('click', () => {
   builder.style.display = "none";
   calci.style.display = "none";
   resumeWeb.style.display = "none";
   xFrom.style.display = "block";
+  spotify.style.display = "none";
 })
 calculator.addEventListener('click', () => {
   builder.style.display = "none";
   calci.style.display = "block";
   resumeWeb.style.display = "none";
   xFrom.style.display = "none";
+  spotify.style.display = "none";
 })
 resume.addEventListener('click', () => {
   builder.style.display = "none";
   calci.style.display = "none";
   resumeWeb.style.display = "block";
   xFrom.style.display = "none";
+  spotify.style.display = "none";
+})
+clone.addEventListener('click', () => {
+  builder.style.display = "none";
+  calci.style.display = "none";
+  resumeWeb.style.display = "none";
+  xFrom.style.display = "none";
+  spotify.style.display = "block";
 })
 
 // navigation-------------------------------------------------------------------
@@ -102,11 +117,21 @@ cross.addEventListener("click", () => {
   bars.style.display = "block";
   ham.style.display = "block";
 });
-let li = document.querySelectorAll('.nav-links')
- li.forEach(e=>{
-  e.addEventListener('click',()=>{
-    document.querySelector(".links").style.display= "none"
-    cross.style.display ="none"
-    bars.style.display ="block"
-  })
- })
+
+
+ function myFunction(x) {
+  if (x.matches) {
+    let li = document.querySelectorAll('.nav-links')
+    li.forEach(e=>{
+     e.addEventListener('click',()=>{
+       document.querySelector(".links").style.display= "none"
+       cross.style.display ="none"
+       bars.style.display ="block"
+     })
+    })
+  } 
+}
+
+var x = window.matchMedia("(max-width: 820px)")
+myFunction(x) 
+x.addListener(myFunction) 

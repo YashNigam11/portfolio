@@ -149,11 +149,16 @@
 .container main .main__cover .cover__heading .intro,
 .container main .main__cover .cover__heading h1 span,
 .container main .main__cover .cover__heading h1 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .container main .main__cover .cover__heading input {
     padding: 0.5rem;
-    font-size: 12px;
+    font-size: 8px;
+    margin-top: 0.4rem;
+  }
+  .container main .main__cover .cover__heading h1,
+.container main .main__cover .cover__heading h1 span {
+    font-size: 1.4rem;
   }
 }
 .container main .portfolio {
@@ -247,6 +252,19 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@media screen and (max-width: 540px) {
+  .container main .portfolio .portfolio__intro p {
+    line-height: 20px;
+    text-align: revert;
+  }
+  .container main .portfolio .portfolio__intro h2 {
+    font-size: 2rem;
+  }
+  .container main .portfolio .portfolio__skills .skills .skill-sec .seek-bars {
+    width: 100%;
+    left: 0;
   }
 }
 .container main .portfolio__contact-details {
@@ -392,6 +410,12 @@
   max-width: 90%;
   margin: 1rem;
 }
+@media screen and (max-width: 1260px) {
+  .container main .portfolio__project .project-menu .project-cards .project__card {
+    gap: 2rem;
+    max-width: 340px;
+  }
+}
 .container main .portfolio__experience {
   background-color: #ff0073;
   color: white;
@@ -460,6 +484,7 @@
 .container main .portfolio__images .portfolio-cards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 2rem;
   gap: 1rem;
 }

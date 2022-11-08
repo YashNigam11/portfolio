@@ -154,11 +154,16 @@
                     .intro,
                     h1 span,
                     h1 {
-                        font-size: 0.9rem;
+                        font-size: 1rem;
                     }
                     input {
                         padding: 0.5rem;
-                        font-size: 12px;
+                        font-size: 8px;
+                        margin-top: 0.4rem;
+                    }
+                    h1,
+                    h1 span {
+                        font-size: 1.4rem;
                     }
                 }
             }
@@ -237,6 +242,27 @@
                             100% {
                                 // width: 0;
                                 opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and(max-width:540px) {
+                .portfolio__intro {
+                    p {
+                        line-height: 20px;
+                        text-align: revert;
+                    }
+                    h2 {
+                        font-size: 2rem;
+                    }
+                }
+                .portfolio__skills {
+                    .skills {
+                        .skill-sec {
+                            .seek-bars {
+                                width: 100%;
+                                left: 0;
                             }
                         }
                     }
@@ -392,6 +418,14 @@
                                 max-width: 90%;
                                 margin: 1rem;
                             }
+                        }
+                    }
+                }
+                @media screen and (max-width: 1260px) {
+                    .project-cards {
+                        .project__card {
+                            gap: 2rem;
+                            max-width: 340px;
                         }
                     }
                 }
