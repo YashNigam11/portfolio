@@ -1,0 +1,84 @@
+html {
+    font-size: 16px;
+    @media screen and (max-width: 820px) {
+        font-size: 10px;
+        .container {
+            header {
+                nav {
+                    flex-wrap: wrap !important;
+                }
+            }
+            main {
+                .portfolio__contact-details {
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 2rem;
+                }
+                .portfolio__project {
+                    .project-menu {
+                        flex-direction: column;
+                        align-items: center;
+                        margin: 0;
+                        .project__menu-item {
+                            ul {
+                                display: flex;
+                                flex-wrap: wrap;
+                            }
+                        }
+                        .project-cards {
+                            flex-direction: column;
+                            align-items: center;
+                            max-width: 300px;
+                           
+                        }
+                    }
+                }
+                .portfolio {
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 0;
+                    .portfolio__skills {
+                        padding-top: 0;
+                    }
+                    .portfolio__intro {
+                        padding-top: 0;
+                        text-align: center;
+                    }
+                }
+                .portfolio__experience {
+                    .personal-advisor {
+                        padding: 0;
+                        .advisor {
+                            flex-direction: column;
+                            .advisor__title::after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .portfolio__images{
+                    .portfolio-cards{
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        gap: 2rem;
+                        .fun-image{
+                            max-width: 300px;
+                        } 
+                    }
+                }
+                .portfolio__contact {
+                    .contact__details {
+                        .form {
+                            form {
+                                .form__input {
+                                    flex-direction: column;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

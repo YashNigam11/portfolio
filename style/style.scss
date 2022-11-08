@@ -1,0 +1,524 @@
+@import "mixin";
+@import "variable";
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    // margin: 5px;
+    // padding: 5px;
+    // border: 1px solid red;
+}
+.container {
+    max-width: 100%;
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        nav {
+            display: flex;
+            background-color: #16273e;
+            align-items: center;
+            .logo {
+                padding: 2rem;
+            }
+            .nav-logo {
+                text-decoration: none;
+                font-size: 2.1rem;
+            }
+            .links {
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    li {
+                        list-style: none;
+                        padding: 2rem;
+                    }
+                }
+            }
+            .nav-links {
+                color: $font-color;
+                text-decoration: none;
+                &:hover {
+                    color: #d812a7;
+                }
+            }
+        }
+        .ham__burg {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 1rem;
+            margin: 1rem;
+            .fa-solid {
+                color: white;
+                font-size: 2rem;
+            }
+            .fa-xmark {
+                display: none;
+            }
+        }
+        @media screen and (max-width: 977px) {
+            nav {
+                flex-direction: column;
+                background-color: #16273e;
+                .nav-logo {
+                    display: inline-block;
+                }
+                .links {
+                    display: none;
+
+                    ul {
+                        flex-direction: column;
+                    }
+                }
+                .ham__burg {
+                    display: block;
+                }
+            }
+        }
+    }
+    main {
+        .container {
+            padding: 2rem 4rem;
+        }
+        .main__cover {
+            background-image: url("../assets/bg-img.jpg");
+            background-size: cover;
+            max-width: 100%;
+            background-repeat: no-repeat;
+            @include flex;
+            .cover__heading {
+                padding: 1rem;
+                @include flex;
+                text-align: center;
+                flex-direction: column;
+                line-height: 1;
+                h3 {
+                    font-size: 4rem;
+                    color: $font-color;
+                }
+                h1 {
+                    span {
+                        background: linear-gradient(90deg, rgba(152, 56, 190, 1) 45%, rgba(230, 40, 162, 1) 49%);
+                        -webkit-text-fill-color: transparent;
+                        -webkit-background-clip: text;
+                        font-size: 10rem;
+                        letter-spacing: 1rem;
+                        color: $primary-color;
+                    }
+
+                    font-size: 7rem;
+                    color: $font-color;
+                    letter-spacing: 11px;
+                }
+
+                .intro {
+                    font-size: 2rem;
+                    color: $font-color;
+                }
+                input {
+                    margin-top: 2rem;
+                    border: none;
+                    padding: 1rem;
+                    background-color: rgb(175, 24, 236);
+                    color: $font-color;
+                    border-radius: 6px;
+                    cursor: pointer;
+                }
+                @media screen and (max-width: 1280px) {
+                    h1 {
+                        font-size: 5rem;
+                    }
+                    h1 span {
+                        font-size: 8rem;
+                    }
+                }
+                @media screen and (max-width: 1024px) {
+                    h1 {
+                        font-size: 4rem;
+                    }
+                    h1 span {
+                        font-size: 5rem;
+                    }
+                    h3 {
+                        font-size: 3rem;
+                    }
+                }
+                @media screen and (max-width: 768px) {
+                }
+                @media screen and (max-width: 540px) {
+                    h3,
+                    .intro,
+                    h1 span,
+                    h1 {
+                        font-size: 0.9rem;
+                    }
+                    input {
+                        padding: 0.5rem;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .portfolio {
+            display: flex;
+            .portfolio__intro {
+                text-align: end;
+                width: 34%;
+                h2 {
+                    font-size: 3rem;
+                    color: #0c6ff185;
+                }
+                h3 {
+                    margin-top: 1rem;
+                    color: #6a13d4b4;
+                }
+                p {
+                    margin-top: 2rem;
+                    line-height: 32px;
+                }
+            }
+            .portfolio__profile-img {
+                width: 33%;
+                @include flex;
+                img {
+                    max-width: 280px;
+                }
+            }
+            .portfolio__skills {
+                text-align: center;
+                width: 33%;
+                .skills {
+                    position: relative;
+                    @include flex;
+                    flex-direction: column;
+                    .skill-sec {
+                        margin: 2rem;
+                        h4 {
+                            list-style: none;
+                        }
+                        .seek-bars {
+                            position: absolute;
+                            left: 25%;
+                            width: 50%;
+                            height: 1rem;
+                            background-color: $primary-color;
+                            border-radius: 20px;
+                            animation: progress 1s ease-in-out forwards;
+                            opacity: 0;
+                            .bar {
+                                top: 20%;
+                                left: 25%;
+                            }
+                        }
+                        .seek-bars::after {
+                            content: "";
+                            width: 15%;
+                            position: absolute;
+                            right: 0;
+                            height: 1rem;
+                            border-radius: 20px;
+                            background-color: rgb(39 78 143 / 71%);
+                        }
+                        .eighty::after {
+                            width: 25%;
+                        }
+                        .seventy::after {
+                            width: 35%;
+                        }
+                        @keyframes progress {
+                            0% {
+                                width: 0;
+                                opacity: 0;
+                            }
+                            100% {
+                                // width: 0;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .portfolio__contact-details {
+            background-color: #dcdcde;
+            color: black;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+
+            i {
+                font-size: 2rem;
+            }
+            .contact__phone {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 4rem;
+            }
+            .contact__address {
+                @extend .contact__phone;
+            }
+            .contact__email {
+                @extend .contact__phone;
+            }
+        }
+        .porfolio__services {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            .services__title {
+                font-size: 1.5rem;
+                font-weight: 600;
+
+                h4 {
+                    font-size: 1rem;
+                    margin-top: 1rem;
+                    font-weight: 100;
+                }
+            }
+            .services {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 2.5rem;
+                padding: 2rem;
+
+                .services-icons {
+                    @include flex;
+                    max-width: 400px;
+                    flex-direction: column;
+                    gap: 1rem;
+                    p {
+                        line-height: 32px;
+                    }
+                    .icon {
+                        height: 4rem;
+                        width: 4rem;
+                        background-color: $background-color;
+                        color: $font-color;
+                        border-radius: 50%;
+                        @include flex;
+                        i {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        .portfolio__git-activity {
+            background-color: #16273e;
+            .testimonials-heading {
+                @include flex;
+                flex-direction: column;
+                padding: 2rem;
+                font-size: 1.5rem;
+                gap: 2rem;
+                color: $font-color;
+                picture {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .portfolio__project {
+            background-color: #f1f1f1;
+            h2 {
+                text-align: center;
+                font-size: 2.5rem;
+            }
+            h4 {
+                font-weight: 100;
+                text-align: center;
+            }
+            .project-menu {
+                display: flex;
+                padding: 2rem;
+                gap: 4rem;
+                .project__menu-item {
+                    ul {
+                        text-align: initial;
+                        list-style: none;
+                        li {
+                            margin: 1rem;
+
+                            button {
+                                border: none;
+                                text-align: initial;
+                                font-weight: 600;
+                                font-size: 1.2rem;
+
+                                &:hover {
+                                    color: $primary-color;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+                .project-cards {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 4rem;
+                    .project__card {
+                        background-color: #fff;
+                        position: relative;
+                        max-width: 400px;
+                        h2 {
+                            font-size: 14px;
+                            text-align: initial;
+                        }
+                        h2,
+                        h5 {
+                            margin: 1rem;
+                        }
+                        h5 {
+                            color: grey;
+                        }
+                        button {
+                            margin: 1rem;
+                            border: none;
+                            background-color: black;
+                            color: #fff;
+                            padding: 0.5rem;
+                            width: 90%;
+                        }
+                        picture {
+                            img {
+                                max-width: 90%;
+                                margin: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .portfolio__experience {
+            background-color: $primary-color;
+            color: $font-color;
+            text-align: center;
+            .experience-title {
+                h2 {
+                    font-size: 2.5rem;
+                }
+            }
+            .personal-advisor {
+                .new {
+                    display: flex;
+                    flex-direction: row-reverse;
+                }
+                .advisor {
+                    display: flex;
+                    padding: 2rem;
+                    gap: 5rem;
+                    .advisor__title {
+                        position: relative;
+                    }
+                    .advisor__title::after {
+                        position: absolute;
+                        content: "";
+                        width: 1rem;
+                        height: 4rem;
+                        background-color: white;
+                        top: 0;
+                        left: 7.6rem;
+                    }
+                    .two::after {
+                        left: -3rem;
+                    }
+                    .advisor__detail {
+                        text-align: initial;
+                    }
+                    .advisor__detail-new {
+                        text-align: end;
+                    }
+                }
+            }
+        }
+        .portfolio__images {
+            background-color: #f1f1f1;
+            .images-heading {
+                text-align: center;
+                h2 {
+                    font-size: 2.5rem;
+                }
+                p {
+                    color: grey;
+                }
+            }
+            @import "images";
+            @media screen and (max-width: 1496px) {
+                .portfolio-cards {
+                    justify-content: center;
+                }
+            }
+        }
+        .portfolio__contact {
+            // padding: 8rem;
+            text-align: center;
+            background-color: #e7e7e7;
+            // margin-top: -4px;
+            .contact__details {
+                background-color: #16273e;
+                color: $font-color;
+                // margin: 0 4rem;
+                .contact-form {
+                    padding: 2rem;
+                    h2 {
+                        font-size: 2.5rem;
+                    }
+                    span {
+                        line-height: 32px;
+                    }
+                }
+                .form {
+                    // padding: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    form {
+                        .form__input {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 1rem;
+                            input {
+                                padding: 0.5rem;
+                                width: 100%;
+                            }
+                        }
+                    }
+                    textarea {
+                        margin-top: 1rem;
+                        width: 100%;
+                    }
+                }
+                .btn-message {
+                    margin: 2rem;
+                    border: none;
+                    padding: 1rem;
+                    background-color: rgb(175, 24, 236);
+                    color: $font-color;
+                    border-radius: 6px;
+                    cursor: pointer;
+                }
+            }
+            @media screen and (max-width: 540px) {
+                textarea {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    footer {
+        background-color: #dcdcde;
+        padding: 2rem;
+        text-align: center;
+        // margin-top: -4px;
+    }
+}
+@import "media";

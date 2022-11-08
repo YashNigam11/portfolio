@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Calculator</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Calculator</h1>
+            <input type="text" name="screen" id="screen" value="">
+            <table>
+                <tr>
+                    <td><button type="button" onclick="bracket1()">(</button></td>
+                    <td><button type="button" onclick="bracket2()">)</button></td>
+                    <td><button type="button" onclick="operator('%')">%</button></td>
+                    <td><button type="button" onclick="operator('/')">/</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" value="7" class="value" >7</button></td>
+                    <td><button type="button" value="8" class="value">8</button></td>
+                    <td><button type="button" value="9" class="value">9</button></td>
+                    <td><button type="button" value="*" onclick="operator('*')">*</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" value="4" class="value">4</button></td>
+                    <td><button type="button" value="5" class="value">5</button></td>
+                    <td><button type="button" value="6" class="value">6</button></td>
+                    <td><button type="button" value="+" onclick="operator('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" value="1" class="value">1</button></td>
+                    <td><button type="button" value="2" class="value">2</button></td>
+                    <td><button type="button" value="3" class="value">3</button></td>
+                    <td><button type="button" value="0" onclick="operator('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" value="0" class="value">0</button></td>
+                    <td><button type="button" value="." class="value">.</button></td>
+                    <td><button type="button" value="=" onclick="result()">=</button></td>
+                    <td><button type="button" value="0" class="clear">AC</button></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <script src="script/main.js"></script>
+</body>
+
+</html>
