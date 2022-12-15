@@ -9,6 +9,9 @@ html {
                 }
             }
             main {
+                .main__cover{
+                    min-height: 95vh;
+                }
                 .portfolio__contact-details {
                     align-items: center;
                     flex-direction: column;

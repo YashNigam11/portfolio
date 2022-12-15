@@ -27,10 +27,13 @@ let magnifiedImage = document.querySelector("#maginfied");
 let magnifiyImage = document.querySelector(".non-magnified");
 magnifiyImage.addEventListener("mousemove", (e) => {
   let xaxis = e.offsetX;
-  // console.log(xaxis);
+  console.log(xaxis);
   let yaxis = e.offsetY;
-  if (xaxis > 30 && yaxis > 20)
-    magnifiedImage.style.clipPath = `circle(10% at ${xaxis}px ${yaxis}px)`;
+  // console.log(yaxis);
+  if (xaxis > 30 && yaxis > 20 && xaxis < 390 && yaxis < 250){
+    magnifiedImage.style.clipPath = `circle(10% at ${xaxis}px ${yaxis}px)`
+  }
+
 });
 //image 1&2/////
 
@@ -51,7 +54,7 @@ let resumeWeb = document.querySelector(".resumeWeb")
 let spotify = document.querySelector(".clonePlyr")
 
 allProject.addEventListener('click', () => {
- 
+
   builder.style.display = "block";
   calci.style.display = "block";
   resumeWeb.style.display = "block";
@@ -119,19 +122,19 @@ cross.addEventListener("click", () => {
 });
 
 
- function myFunction(x) {
+function myFunction(x) {
   if (x.matches) {
     let li = document.querySelectorAll('.nav-links')
-    li.forEach(e=>{
-     e.addEventListener('click',()=>{
-       document.querySelector(".links").style.display= "none"
-       cross.style.display ="none"
-       bars.style.display ="block"
-     })
+    li.forEach(e => {
+      e.addEventListener('click', () => {
+        document.querySelector(".links").style.display = "none"
+        cross.style.display = "none"
+        bars.style.display = "block"
+      })
     })
-  } 
+  }
 }
 
 var x = window.matchMedia("(max-width: 820px)")
-myFunction(x) 
+myFunction(x)
 x.addListener(myFunction) 
